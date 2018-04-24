@@ -8,7 +8,7 @@
   },
   "scripts": {
     "install":
-      "mkdir -p dist/{js,img,css,fonts} && mkdir -p src/{js,img,pug,sass,fonts} && touch src/js/app.js && touch src/sass/app.scss && yarn install",
+      "mkdir -p dist/{js,img,css,fonts} && mkdir -p src/{js,img,pug,sass,fonts} && touch src/js/app.js && touch src/sass/app.scss && touch dist/index.html && yarnpkg",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
