@@ -9,6 +9,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const iconfont = require('gulp-iconfont');
 const iconfontCSS = require('gulp-iconfont-css');
+const imagemin = require('gulp-imagemin');
 
 /* ---------------------------------------------------------------
  *  Settings
@@ -16,7 +17,7 @@ const iconfontCSS = require('gulp-iconfont-css');
 // All source files and folders are placed in the "src" directory,
 // the processed files will be compiled to the "dist" folder
 
-// The constants below specificies the directory for the different
+// The constants below specify the directory for the different
 // languages handled by gulp
 
 const settings = {
@@ -70,6 +71,7 @@ gulp.task('pug', () => {
     .pipe(gulp.dest(`${settings.pug.dist}`));
 });
 
+// Converts SVG icons placed in the SVG source directory to icon fonts
 gulp.task('iconfont', () => {
   return gulp
     .src(`${settings.iconfont.src}/**/*.svg`)
@@ -129,6 +131,28 @@ gulp.task('fonts', () => {
 gulp.task('images', () => {
   return gulp
     .src(`${settings.img.src}/**/*.*`)
+    .pipe(imagemin([
+      imagemin.gifsicle({
+        interlaced: true
+      }),
+      imagemin.jpegtran({
+        progressive: true
+      }),
+      imagemin.optipng({
+        optimizationLevel: 5
+      }),
+      imagemin.svgo({
+        plugins: [{
+            removeViewBox: true
+          },
+          {
+            cleanupIDs: false
+          }
+        ]
+      })
+    ], {
+      verbose: true
+    }))
     .pipe(gulp.dest(settings.img.dist));
 });
 
@@ -142,7 +166,6 @@ gulp.task('images', () => {
 // Default Task
 
 gulp.task('serve', ['pug', 'sass', 'fonts', 'images', 'iconfont'], function () {
-  // Initialize Browsersync
   browserSync.init({
     server: {
       baseDir: './dist',
@@ -163,9 +186,6 @@ gulp.task('serve', ['pug', 'sass', 'fonts', 'images', 'iconfont'], function () {
 
   // Watch icon files
   gulp.watch(`${settings.iconfont.src}/**/*.*`, ['iconfont']);
-
-  // Watch js files
-  // gulp.watch(`${settings.js.src}/**/*.js`, ["js"]);
 
   // Watch html files and reload
   gulp.watch(`${settings.pug.dist}/**/*.html`).on('change', browserSync.reload);
