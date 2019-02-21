@@ -1,0 +1,239 @@
+@font-face {
+  font-family: "iconfonts";
+  src: url('/assets/fonts/iconfonts.eot');
+  src: url('/assets/fonts/iconfonts.eot?#iefix') format('eot'),
+    url('/assets/fonts/iconfonts.woff2') format('woff2'),
+    url('/assets/fonts/iconfonts.woff') format('woff'),
+    url('/assets/fonts/iconfonts.ttf') format('truetype'),
+    url('/assets/fonts/iconfonts.svg#iconfonts') format('svg');
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icon-styles {
+  font-family: "iconfonts";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  text-decoration: none;
+  text-transform: none;
+}
+
+%icon {
+  @include icon-styles;
+}
+
+@function icon-char($filename) {
+  $char: "";
+
+   @if $filename==arrow-left {
+      $char: "\E001";
+    }
+
+     @if $filename==bell {
+      $char: "\E002";
+    }
+
+     @if $filename==calendar {
+      $char: "\E003";
+    }
+
+     @if $filename==check-circle {
+      $char: "\E004";
+    }
+
+     @if $filename==check {
+      $char: "\E005";
+    }
+
+     @if $filename==chevron-down {
+      $char: "\E006";
+    }
+
+     @if $filename==clock {
+      $char: "\E007";
+    }
+
+     @if $filename==emoji {
+      $char: "\E008";
+    }
+
+     @if $filename==games {
+      $char: "\E009";
+    }
+
+     @if $filename==home {
+      $char: "\E00A";
+    }
+
+     @if $filename==homework {
+      $char: "\E00B";
+    }
+
+     @if $filename==image {
+      $char: "\E00C";
+    }
+
+     @if $filename==lessons {
+      $char: "\E00D";
+    }
+
+     @if $filename==mic {
+      $char: "\E00E";
+    }
+
+     @if $filename==more {
+      $char: "\E00F";
+    }
+
+     @if $filename==music {
+      $char: "\E010";
+    }
+
+     @if $filename==play {
+      $char: "\E011";
+    }
+
+     @if $filename==send {
+      $char: "\E012";
+    }
+
+     @if $filename==speaker {
+      $char: "\E013";
+    }
+
+     @if $filename==tests {
+      $char: "\E014";
+    }
+
+     @if $filename==video-lessons {
+      $char: "\E015";
+    }
+
+     @if $filename==vocabulary {
+      $char: "\E016";
+    }
+
+    @return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+  &:#{$insert} {
+    @if $extend {
+      @extend %icon;
+    }
+
+    @else {
+      @include icon-styles;
+    }
+
+    content: icon-char($filename);
+  }
+}
+
+.icon-arrow-left {
+    @include icon(arrow-left);
+  }
+
+  .icon-bell {
+    @include icon(bell);
+  }
+
+  .icon-calendar {
+    @include icon(calendar);
+  }
+
+  .icon-check-circle {
+    @include icon(check-circle);
+  }
+
+  .icon-check {
+    @include icon(check);
+  }
+
+  .icon-chevron-down {
+    @include icon(chevron-down);
+  }
+
+  .icon-clock {
+    @include icon(clock);
+  }
+
+  .icon-emoji {
+    @include icon(emoji);
+  }
+
+  .icon-games {
+    @include icon(games);
+  }
+
+  .icon-home {
+    @include icon(home);
+  }
+
+  .icon-homework {
+    @include icon(homework);
+  }
+
+  .icon-image {
+    @include icon(image);
+  }
+
+  .icon-lessons {
+    @include icon(lessons);
+  }
+
+  .icon-mic {
+    @include icon(mic);
+  }
+
+  .icon-more {
+    @include icon(more);
+  }
+
+  .icon-music {
+    @include icon(music);
+  }
+
+  .icon-play {
+    @include icon(play);
+  }
+
+  .icon-send {
+    @include icon(send);
+  }
+
+  .icon-speaker {
+    @include icon(speaker);
+  }
+
+  .icon-tests {
+    @include icon(tests);
+  }
+
+  .icon-video-lessons {
+    @include icon(video-lessons);
+  }
+
+  .icon-vocabulary {
+    @include icon(vocabulary);
+  }
+
+  

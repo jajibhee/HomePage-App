@@ -1,0 +1,50 @@
+
+@import 'mixins';
+
+//colors
+$colors: (
+    main: #4E58FF,
+    btn: #5B41E9,
+    btn-text:#CFC7F9,
+    accent: #F85568,
+    color-font: #FFFFFF
+);
+
+@function colors($colorName){
+    @return map-get($map:$colors, $key:$colorName)
+}
+
+.box{
+    padding: 15px;
+    
+    .box1{
+        padding:25px;
+        color: colors(color-font);
+        width: 300px;
+        height: 850px;
+        background-color: colors(main);
+        
+      
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.5px solid #ffffff55;
+        padding-bottom: 2rem;
+
+        .right{
+            display: flex;
+        
+        img{
+          margin-right: 20px;
+          border-radius: 50%;
+          height: 3rem;
+          width: 3rem;
+      }
+      img{
+          float: left;
+      }
+    }
+    }
+}
+  }

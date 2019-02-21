@@ -1,0 +1,43 @@
+.box {
+  padding: 15px;
+}
+
+.box .box1 {
+  padding: 25px;
+  color: #FFFFFF;
+  width: 300px;
+  height: 850px;
+  background-color: #4E58FF;
+}
+
+.box .box1 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 0.5px solid #ffffff55;
+  padding-bottom: 2rem;
+}
+
+.box .box1 .header .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box .box1 .header .right img {
+  margin-right: 20px;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+}
+
+.box .box1 .header .right img {
+  float: left;
+}
+/*# sourceMappingURL=app.css.map */
