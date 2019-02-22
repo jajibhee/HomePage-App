@@ -1,20 +1,38 @@
+mixin menuItem(img, title)
+  div.menu__item
+    img(class="menu__item-icon" src=`assets/img/${img}`, alt=`${title}`)
+    p.menu__item-name= title
+
 <!DOCTYPE html>
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        link(rel="stylesheet", href="assets/css/app.css")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Document
-    body
-        .box
-          .box1 
-            .header
-              .right
-                img(src="assets/img/dp.jpg", alt="")
-                p
-                  |Cayla Brister
-                img(src="assets/img/chevron-down.svg", alt="")
-              img(src="assets/img/bell.svg", alt="")
+  head
+      meta(charset="UTF-8")
+      link(rel="stylesheet", href="assets/css/app.css")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      meta(http-equiv="X-UA-Compatible", content="ie=edge")
+      title Homepage App
+  body
+    .container
+      header.sidebar 
+        div.sidebar__header
+          div.profile
+            img(class="profile__avatar" src="assets/img/dp.jpg", alt="Cayla Brister")
+            p.profile__name Cayla Brister
+            img(class="profile__dropdown" src="assets/img/chevron-down.svg", alt="Dropdown")
+          img(class="profile__notification" src="assets/img/bell.svg", alt="")
 
-            .ho
+        nav(class="sidebar__nav menu")
+          +menuItem("home.svg", "Home")
+          div.menu__group
+            p.menu__group-header Courses
+            div.menu__group-items
+              +menuItem("lessons.svg", "Lessons")
+              +menuItem("homework.svg", "Homework")
+            p.menu__group-header Self Education
+            .menu__group-items
+              +menuItem('vocabulary.svg', 'Vocabulary')    
+              +menuItem('video-lessons.svg', 'Video Lessons')    
+              +menuItem('tests.svg', 'Tests')    
+              +menuItem('games.svg', 'Games')    
+        
+            

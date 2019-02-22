@@ -5,18 +5,48 @@
     <link rel="stylesheet" href="assets/css/app.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Document</title>
+    <title>Homepage App</title>
   </head>
   <body>
-    <div class="box">
-      <div class="box1"> 
-        <div class="header">
-          <div class="right"><img src="assets/img/dp.jpg" alt=""/>
-            <p>Cayla Brister</p><img src="assets/img/chevron-down.svg" alt=""/>
-          </div><img src="assets/img/bell.svg" alt=""/>
+    <div class="container">
+      <header class="sidebar"> 
+        <div class="sidebar__header">
+          <div class="profile"><img class="profile__avatar" src="assets/img/dp.jpg" alt="Cayla Brister"/>
+            <p class="profile__name">Cayla Brister</p><img class="profile__dropdown" src="assets/img/chevron-down.svg" alt="Dropdown"/>
+          </div><img class="profile__notification" src="assets/img/bell.svg" alt=""/>
         </div>
-        <div class="ho"></div>
-      </div>
+        <nav class="sidebar__nav menu">
+          <div class="menu__item"><img class="menu__item-icon" src="assets/img/home.svg" alt="Home"/>
+            <p class="menu__item-name">Home</p>
+          </div>
+          <div class="menu__group">
+            <p class="menu__group-header">Courses</p>
+            <div class="menu__group-items">
+              <div class="menu__item"><img class="menu__item-icon" src="assets/img/lessons.svg" alt="Lessons"/>
+                <p class="menu__item-name">Lessons</p>
+              </div>
+              <div class="menu__item"><img class="menu__item-icon" src="assets/img/homework.svg" alt="Homework"/>
+                <p class="menu__item-name">Homework</p>
+              </div>
+            </div>
+            <p class="menu__group-header">Self Education</p>
+            <div class="menu__group-items">
+              <div class="menu__item"><img class="menu__item-icon" src="assets/img/vocabulary.svg" alt="Vocabulary"/>
+                <p class="menu__item-name">Vocabulary</p>
+              </div>
+              <div class="menu__item"><img class="menu__item-icon" src="assets/img/video-lessons.svg" alt="Video Lessons"/>
+                <p class="menu__item-name">Video Lessons</p>
+              </div>
+              <div class="menu__item"><img class="menu__item-icon" src="assets/img/tests.svg" alt="Tests"/>
+                <p class="menu__item-name">Tests</p>
+              </div>
+              <div class="menu__item"><img class="menu__item-icon" src="assets/img/games.svg" alt="Games"/>
+                <p class="menu__item-name">Games</p>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
     </div>
   </body>
 </html>

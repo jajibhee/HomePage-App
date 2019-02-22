@@ -1,0 +1,121 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "iconfonts";
+  src: url("/assets/fonts/iconfonts.eot");
+  src: url("/assets/fonts/iconfonts.eot?#iefix") format("eot"), url("/assets/fonts/iconfonts.woff2") format("woff2"), url("/assets/fonts/iconfonts.woff") format("woff"), url("/assets/fonts/iconfonts.ttf") format("truetype"), url("/assets/fonts/iconfonts.svg#iconfonts") format("svg");
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-left:before, .icon-bell:before, .icon-calendar:before, .icon-check-circle:before, .icon-check:before, .icon-chevron-down:before, .icon-clock:before, .icon-emoji:before, .icon-games:before, .icon-home:before, .icon-homework:before, .icon-image:before, .icon-lessons:before, .icon-mic:before, .icon-more:before, .icon-music:before, .icon-play:before, .icon-send:before, .icon-speaker:before, .icon-tests:before, .icon-video-lessons:before, .icon-vocabulary:before {
+  font-family: "iconfonts";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.icon-arrow-left:before {
+  content: "";
+}
+
+.icon-bell:before {
+  content: "";
+}
+
+.icon-calendar:before {
+  content: "";
+}
+
+.icon-check-circle:before {
+  content: "";
+}
+
+.icon-check:before {
+  content: "";
+}
+
+.icon-chevron-down:before {
+  content: "";
+}
+
+.icon-clock:before {
+  content: "";
+}
+
+.icon-emoji:before {
+  content: "";
+}
+
+.icon-games:before {
+  content: "";
+}
+
+.icon-home:before {
+  content: "";
+}
+
+.icon-homework:before {
+  content: "";
+}
+
+.icon-image:before {
+  content: "";
+}
+
+.icon-lessons:before {
+  content: "";
+}
+
+.icon-mic:before {
+  content: "";
+}
+
+.icon-more:before {
+  content: "";
+}
+
+.icon-music:before {
+  content: "";
+}
+
+.icon-play:before {
+  content: "";
+}
+
+.icon-send:before {
+  content: "";
+}
+
+.icon-speaker:before {
+  content: "";
+}
+
+.icon-tests:before {
+  content: "";
+}
+
+.icon-video-lessons:before {
+  content: "";
+}
+
+.icon-vocabulary:before {
+  content: "";
+}
+/*# sourceMappingURL=iconfonts.css.map */

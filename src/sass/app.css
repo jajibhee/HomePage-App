@@ -40,4 +40,18 @@
 .box .box1 .header .right img {
   float: left;
 }
+
+.box .box1 .home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box .box1 .home div > img {
+  padding-right: 20px;
+}
 /*# sourceMappingURL=app.css.map */
