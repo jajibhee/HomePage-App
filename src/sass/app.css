@@ -1,16 +1,30 @@
-.box {
-  padding: 15px;
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,600");
+body {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f0f0f0;
 }
 
-.box .box1 {
-  padding: 25px;
-  color: #FFFFFF;
-  width: 300px;
+.container {
+  margin: 2rem 4rem;
+  -webkit-box-shadow: 4px 0px 16px #cccccc88;
+          box-shadow: 4px 0px 16px #cccccc88;
+  background-color: #ffffff;
+}
+
+.container .sidebar {
+  padding: 1rem;
+  color: #ffffff;
+  width: 250px;
   height: 850px;
-  background-color: #4E58FF;
+  background-color: #4e58ff;
 }
 
-.box .box1 .header {
+.container .sidebar__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,37 +35,102 @@
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 0.5px solid #ffffff55;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
-.box .box1 .header .right {
+.container .menu {
+  padding-top: 2.5rem;
+}
+
+.container .menu__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 0.75rem 0;
+  border-radius: 4px;
 }
 
-.box .box1 .header .right img {
+.container .menu__item:hover {
+  background-color: #6870ff;
+  cursor: pointer;
+}
+
+.container .menu__item-name {
+  margin: 0;
+}
+
+.container .menu__item-icon {
+  margin-right: 1rem;
+  height: 1.25rem;
+}
+
+.container .menu__group {
+  margin-top: 2.5rem;
+}
+
+.container .menu__group-header {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.container .menu__group-items {
+  margin-bottom: 2rem;
+}
+
+/* Profile */
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile:hover {
+  cursor: pointer;
+}
+
+.profile__avatar {
   margin-right: 20px;
   border-radius: 50%;
   height: 3rem;
   width: 3rem;
 }
 
-.box .box1 .header .right img {
-  float: left;
+.profile__name {
+  font-weight: bolder;
+  margin-right: 0.5rem;
 }
 
-.box .box1 .home {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 2.5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.profile__dropdown {
+  height: 1rem;
 }
 
-.box .box1 .home div > img {
-  padding-right: 20px;
+.profile__notification:hover {
+  cursor: pointer;
+}
+
+/* Notification Dot */
+.unread {
+  position: relative;
+}
+
+.unread::before {
+  position: absolute;
+  content: "";
+  background-color: #f85068;
+  top: 0;
+  right: 0;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=app.css.map */

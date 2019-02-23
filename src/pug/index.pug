@@ -19,7 +19,8 @@ html(lang="en")
             img(class="profile__avatar" src="assets/img/dp.jpg", alt="Cayla Brister")
             p.profile__name Cayla Brister
             img(class="profile__dropdown" src="assets/img/chevron-down.svg", alt="Dropdown")
-          img(class="profile__notification" src="assets/img/bell.svg", alt="")
+          .profile__notification.unread
+            img(class="profile__notification-icon" src="assets/img/bell.svg", alt="")
 
         nav(class="sidebar__nav menu")
           +menuItem("home.svg", "Home")
