@@ -301,3 +301,69 @@ body {
     }
   }
 }
+
+.main {
+  margin-left: 1.5rem;
+  width: 66rem;
+  height: inherit;
+  background-color: colors(btn-text);
+  padding: 1rem;
+
+  &__profile3 {
+    margin-top: 0.5rem;
+    display: flex;
+    padding-left: 1rem;
+    align-items: center;
+
+    &-avatar {
+      margin-right: 20px;
+      border-radius: 50%;
+      height: 3rem;
+      width: 3rem;
+    }
+
+    &-name {
+      font-weight: bolder;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.main1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid #ffffff55;
+  padding-bottom: 1rem;
+}
+
+.main2 {
+  height: 100vh;
+  padding-top: 1rem;
+
+  &__box {
+    position: relative;
+    &-image1 {
+      max-width: 100%;
+      border-radius: 5px;
+      box-shadow: gray;
+    }
+
+    &-image2 {
+      height: 10rem;
+      position: absolute;
+      top: 1.5%;
+      right: 1.5%;
+      border-radius: 5px;
+      box-shadow: 4px 0px 16px #cccccc88;
+    }
+    &-buttons {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

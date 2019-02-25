@@ -346,4 +346,89 @@ body {
 .materials__list-images img {
   height: 80px;
 }
+
+.main {
+  margin-left: 1.5rem;
+  width: 66rem;
+  height: inherit;
+  background-color: #cfc7f9;
+  padding: 1rem;
+}
+
+.main__profile3 {
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__profile3-avatar {
+  margin-right: 20px;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+}
+
+.main__profile3-name {
+  font-weight: bolder;
+  margin-right: 0.5rem;
+}
+
+.main1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 0.5px solid #ffffff55;
+  padding-bottom: 1rem;
+}
+
+.main2 {
+  height: 100vh;
+  padding-top: 1rem;
+}
+
+.main2__box {
+  position: relative;
+}
+
+.main2__box-image1 {
+  max-width: 100%;
+  border-radius: 5px;
+  -webkit-box-shadow: gray;
+          box-shadow: gray;
+}
+
+.main2__box-image2 {
+  height: 10rem;
+  position: absolute;
+  top: 1.5%;
+  right: 1.5%;
+  border-radius: 5px;
+  -webkit-box-shadow: 4px 0px 16px #cccccc88;
+          box-shadow: 4px 0px 16px #cccccc88;
+}
+
+.main2__box-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
 /*# sourceMappingURL=app.css.map */
