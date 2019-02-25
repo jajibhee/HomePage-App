@@ -26,12 +26,14 @@ body {
   margin: 2rem 4rem;
   box-shadow: 4px 0px 16px #cccccc88;
   background-color: #ffffff;
+  display: flex;
+  align-items: flex start;
 
   .sidebar {
     padding: 1rem;
     color: colors(color-font);
     width: 250px;
-    height: 850px;
+    height: inherit;
     background-color: colors(main);
 
     &__header {
@@ -131,5 +133,171 @@ body {
     height: 8px;
     width: 8px;
     border-radius: 50%;
+  }
+}
+
+.aside {
+  width: 300px;
+  padding: 1rem;
+  .lesson-one {
+    display: flex;
+    align-items: center;
+
+    &__arrow {
+      margin-right: 20px;
+      border-radius: 50%;
+      height: 1.5rem;
+    }
+
+    &__h1 {
+      font-weight: bolder;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.b2 {
+  padding-left: 1rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__eng {
+    color: colors(btn);
+    font-weight: bolder;
+  }
+
+  &__line {
+    color: colors(btn);
+    font-weight: bolder;
+    padding: 0 1rem;
+  }
+
+  &__verb {
+    font-weight: bolder;
+  }
+}
+
+.timestamp {
+  margin-top: -1.5rem;
+  display: flex;
+  padding-left: 1rem;
+  align-items: center;
+
+  .time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__clock {
+      height: 1rem;
+    }
+
+    &__text {
+      font-weight: lighter;
+      padding-left: 0.5rem;
+    }
+  }
+
+  .calendar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1.5rem;
+
+    &__calendar {
+      height: 1rem;
+    }
+
+    &__july {
+      font-weight: lighter;
+      padding-left: 0.5rem;
+    }
+  }
+}
+
+.profile2 {
+  margin-top: 0.5rem;
+  display: flex;
+  padding-left: 1rem;
+  align-items: center;
+  border-bottom: 0.5px solid black;
+  padding-bottom: 1rem;
+
+  &__avatar {
+    margin-right: 20px;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  &__name {
+    font-weight: bolder;
+    margin-right: 0.5rem;
+  }
+}
+
+.btn {
+  margin-top: 1.5rem;
+  width: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__01,
+  &__02,
+  &__03 {
+    height: 1rem;
+    background-color: lighten(colors(btn-text), 5%);
+    width: 5rem;
+    border-radius: 5px;
+    padding: 10px 10px;
+    color: colors(btn);
+    font-weight: bolder;
+    border: none;
+    margin-right: 15px;
+  }
+}
+
+.agenda {
+  margin-top: 3.5rem;
+
+  &__list {
+    display: flex;
+
+    &__tick {
+      margin-right: 2.5rem;
+      border-left: 4px solid colors(main);
+    }
+  }
+}
+
+.materials {
+  margin-top: 3.5rem;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    background-color: lighten(colors(btn-text), 5%);
+    border-radius: 5px;
+    padding: 0px 5px;
+    margin-bottom: 1rem;
+
+    &-img {
+      height: 43px;
+      color: #f85068;
+      padding-right: 2.5rem;
+    }
+
+    &-text h2 {
+      margin-bottom: -10px;
+    }
+
+    &-images {
+      display: flex;
+    }
+
+    &-images img {
+      height: 80px;
+    }
   }
 }

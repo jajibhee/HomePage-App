@@ -1,7 +1,15 @@
 mixin menuItem(img, title)
   div.menu__item
-    img(class="menu__item-icon" src=`assets/img/${img}`, alt=`${title}`)
+    img(class="menu__item-icon" src=`assets/img/${img}` alt=`${title}`)
     p.menu__item-name= title
+
+mixin materialsList(img, title, caption)
+  div.materials__list
+    img(class="materials__list-img" src=`assets/img/${img}` alt=`${title}`)
+    div.materials__list-text
+      h2= title
+      p= caption
+
 
 <!DOCTYPE html>
 html(lang="en")
@@ -36,4 +44,59 @@ html(lang="en")
               +menuItem('tests.svg', 'Tests')    
               +menuItem('games.svg', 'Games')    
         
-            
+      aside.aside
+        .lesson-one
+          img(class="lesson-one__arrow" src="assets/img/arrow-left.svg", alt="left-arrow")
+          h1.lesson-one__text Today's Lesson
+
+        .b2
+          h1.b2__eng Eng B2
+          h1.b2__line |
+          h1.b2__verb Verb's Endings
+          
+        .timestamp
+          .time
+            img(class="time__clock" src="assets/img/clock.svg", alt="clock")
+            p.time__text 14:00
+          .calendar
+            img(class="calendar__calendar" src="assets/img/calendar.svg", alt="calendar")  
+            p.calendar__july 12  July  
+
+        .profile2
+          img(class="profile2__avatar" src="assets/img/newdp.png", alt="Cayla Brister")
+          p.profile2__name Prescott MacCaffery
+
+        .btn
+          p(class="btn__01 ") Speaking
+          p(class="btn__02 ") Verb
+          p(class="btn__03 ") Grammar
+
+        .agenda
+          h1 Lesson agenda
+
+        .agenda__list
+          img(class="list__tick" src="assets/img/check-circle.svg", alt="tick")
+          p.list__text Introduction
+            //- p.list__text Comparative adjectives
+            //- p.list__text First conditionals
+            //- p.list__text Going to
+            //- p.list__text Home work
+
+        h1.materials Lesson Materials
+        +materialsList("play.svg", "London Situation", "Vedeo Lesson")
+        //- +materialsList("image.svg", "London Places", "Vocabulary Training")
+        
+        .materials__list
+          img(class="materials__list-img" src="assets/img/play.svg", alt="play")
+          .materials__list-text
+            h2 London Situation
+            p Vedeo Lesson
+          //- .materials__list-images
+          //-   img(src="assets/img/statue.jpeg", alt="")
+          //-   img(src="assets/img/building.jpeg", alt="")
+          //-   img(src="assets/img/store.jpeg", alt="")
+
+
+        +materialsList("music.svg", "Slow Speaking", "Hearing Exercise")
+        +materialsList("tests.svg", "Home Test", "Verb's Ending Test")
+
