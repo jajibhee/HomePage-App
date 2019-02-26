@@ -23,6 +23,7 @@ body {
 }
 
 .container {
+  width: 100%;
   margin: 2rem 4rem;
   box-shadow: 4px 0px 16px #cccccc88;
   background-color: #ffffff;
@@ -30,6 +31,7 @@ body {
   align-items: flex start;
 
   .sidebar {
+    max-width: 30%;
     padding: 1rem;
     color: colors(color-font);
     width: 250px;
@@ -137,7 +139,7 @@ body {
 }
 
 .aside {
-  width: 300px;
+  max-width: 30%;
   padding: 1rem;
   .lesson-one {
     display: flex;
@@ -304,7 +306,7 @@ body {
 
 .main {
   margin-left: 1.5rem;
-  width: 66rem;
+  max-width: 60%;
   height: inherit;
   background-color: colors(btn-text);
   padding: 1rem;
@@ -327,6 +329,9 @@ body {
       margin-right: 0.5rem;
     }
   }
+  &-linebreak img {
+    vertical-align: middle;
+  }
 }
 
 .main1 {
@@ -338,7 +343,7 @@ body {
 }
 
 .main2 {
-  height: 100vh;
+  // height: 100vh;
   padding-top: 1rem;
 
   &__box {
@@ -352,7 +357,7 @@ body {
     &-image2 {
       height: 10rem;
       position: absolute;
-      top: 1.5%;
+      top: 2.5%;
       right: 1.5%;
       border-radius: 5px;
       box-shadow: 4px 0px 16px #cccccc88;
@@ -361,9 +366,164 @@ body {
       display: flex;
       align-items: center;
       position: absolute;
-      bottom: 10%;
-      left: 50%;
-      transform: translateX(-50%);
+      bottom: 3%;
+      left: 45%;
+      // transform: translateX(-50%);
+      // (I didnt use this cause I divided 90 by 2)
+
+      &-button-1,
+      &-button-2 {
+        border-radius: 50%;
+        background-color: colors(color-font);
+        height: 20px;
+        width: 20px;
+        margin: 15px 5px;
+        padding: 7.5px;
+      }
+      &-button-3 {
+        border-radius: 50%;
+        background-color: colors(accent);
+        height: 20px;
+        width: 20px;
+        margin: 15px 5px;
+        padding: 7.5px;
+      }
     }
+    &-4 {
+      position: absolute;
+      bottom: 3%;
+      right: 1%;
+      border-radius: 50%;
+      background-color: colors(color-font);
+      height: 20px;
+      width: 20px;
+      margin: 15px 5px;
+      padding: 7.5px;
+    }
+  }
+}
+
+.linebreak {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  width: 100%;
+
+  &__img {
+    // display: block;
+    margin: 0 1rem;
+    background-color: lighten(colors(btn-text), 5%);
+  }
+
+  .line {
+    height: 1px;
+    background-color: darken(colors(color-font), 15%);
+    flex-basis: 100%;
+    // border-bottom: 3px solid saddlebrown;
+  }
+
+  .line2 {
+    height: 1px;
+    background-color: darken(colors(color-font), 15%);
+    flex-basis: 100%;
+    // border: 3px solid black;
+  }
+}
+
+.chat {
+  position: relative;
+  max-width: 100%;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  border-bottom: 0.5px solid black;
+  padding-bottom: 15rem;
+
+  &__avatar {
+    margin-top: -30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.chatbox-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  // justify-content: end;
+}
+.chatbox__text {
+  padding: 20px;
+  width: 25%;
+  text-align: center;
+  background-color: gray;
+  color: colors(btn);
+  border-radius: 0px 10px 10px 10px;
+  border: 1px solid inherit;
+  margin: 0.5rem;
+}
+
+.chatbox__text-2 {
+  padding: 20px;
+  width: 25%;
+  text-align: center;
+  background-color: gray;
+  color: colors(btn);
+  border-radius: 10px 10px 10px 0px;
+  border: 1px solid inherit;
+  margin-right: 0.5rem;
+}
+
+.chatbox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.chatbox-right {
+  justify-content: flex-end;
+}
+
+.chatbox-right .chat__avatar {
+  order: 2;
+}
+
+.message {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.message-1 {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  // justify-content: space-around;
+}
+
+.message-1 img {
+  margin: 0px 0.5rem;
+  padding-right: 1rem;
+}
+
+.message-1 p {
+  margin-left: 2.5rem;
+  border: none;
+}
+
+.chat-form {
+  padding: 8px;
+  width: 900px;
+  font-size: 1em;
+  border: none;
+  background-color: transparent;
+
+  &:active,
+  &:focus {
+    outline: 0;
   }
 }

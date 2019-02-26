@@ -87,10 +87,10 @@ html(lang="en")
         //- +materialsList("image.svg", "London Places", "Vocabulary Training")
         
         .materials__list
-          img(class="materials__list-img" src="assets/img/play.svg", alt="play")
+          img(class="materials__list-img" src="assets/img/image.svg", alt="play")
           .materials__list-text
-            h2 London Situation
-            p Vedeo Lesson
+            h2 London Places
+            p Vocabulary Training
           //- .materials__list-images
           //-   img(src="assets/img/statue.jpeg", alt="")
           //-   img(src="assets/img/building.jpeg", alt="")
@@ -101,17 +101,41 @@ html(lang="en")
         +materialsList("tests.svg", "Home Test", "Verb's Ending Test")
 
       main.main
+        
         div.main1
           .main__profile3 
             img(class="main__profile3-avatar" src="assets/img/newdp.png", alt="Cayla Brister")
             p.main__profile3-name Prescott MacCaffery
           img(src="assets/img/more.svg", alt="")
+       
         div.main2
           .main2__box
             img(class="main2__box-image1" src="assets/img/main.jpeg", alt="main")
             img(class="main2__box-image2" src="assets/img/main-2.jpeg", alt="")
             .main2__box-buttons
-              img(class="main2__box-button1" src="assets/img/mic.svg", alt="")
-              img(class="main2__box-button2" src="assets/img/mic.svg", alt="")
-              img(class="main2__box-button3" src="assets/img/mic.svg", alt="")
-              img(class="main2__box-button4" src="assets/img/mic.svg", alt="")
+              img(class="main2__box-buttons-button-1" src="assets/img/mic.svg", alt="")
+              img(class="main2__box-buttons-button-2" src="assets/img/video.svg", alt="")
+              img(class="main2__box-buttons-button-3" src="assets/img/call.svg", alt="")
+            img(class="main2__box-4" src="assets/img/call.svg", alt="")
+        
+        div.linebreak
+          .line
+          img(class="linebreak__img" src="assets/img/menu.svg", alt="menu") 
+          .line2
+
+        .chat
+          .chatbox-row
+            .chatbox
+              img(class="chat__avatar" src="assets/img/dp.jpg", alt="Cayla Brister")
+              p.chatbox__text Hi Cayla!  If you have any questions before    we start, feel free to ask. 
+          .chatbox-row
+            .chatbox.chatbox-right
+              img(class="chat__avatar" src="assets/img/newdp.png", alt="Cayla Brister")
+              p.chatbox__text-2 Hello Prescott! Should I check our last lesson?
+
+        .message
+            .message-1
+              img(src="assets/img/mic.svg", alt="")
+              img(src="assets/img/emoji.svg", alt="")
+              input(type="text" placeholder="Type something...").chat-form
+            img(src="assets/img/send.svg", alt="")
