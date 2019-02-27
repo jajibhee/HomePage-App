@@ -48,28 +48,28 @@ html(lang="en")
         .lesson-one
           img(class="lesson-one__arrow" src="assets/img/arrow-left.svg", alt="left-arrow")
           h1.lesson-one__text Today's Lesson
-
-        .b2
-          h1.b2__eng Eng B2
-          h1.b2__line |
-          h1.b2__verb Verb's Endings
+        .lesson-box
+          .b2
+            h1.b2__eng Eng B2
+            h1.b2__line |
+            h1.b2__verb Verb's Endings
           
-        .timestamp
-          .time
-            img(class="time__clock" src="assets/img/clock.svg", alt="clock")
-            p.time__text 14:00
-          .calendar
-            img(class="calendar__calendar" src="assets/img/calendar.svg", alt="calendar")  
-            p.calendar__july 12  July  
+          .timestamp
+            .time
+              img(class="time__clock" src="assets/img/clock.svg", alt="clock")
+              p.time__text 14:00
+            .calendar
+              img(class="calendar__calendar" src="assets/img/calendar.svg", alt="calendar")  
+              p.calendar__july 12  July  
 
-        .profile2
-          img(class="profile2__avatar" src="assets/img/newdp.png", alt="Cayla Brister")
-          p.profile2__name Prescott MacCaffery
+          .profile2
+            img(class="profile2__avatar" src="assets/img/newdp.png", alt="Cayla Brister")
+            p.profile2__name Prescott MacCaffery
 
-        .btn
-          p(class="btn__01 ") Speaking
-          p(class="btn__02 ") Verb
-          p(class="btn__03 ") Grammar
+          .btn
+            p(class="btn__01 ") Speaking
+            p(class="btn__02 ") Verb
+            p(class="btn__03 ") Grammar
 
         .agenda
           h1 Lesson agenda
@@ -127,11 +127,16 @@ html(lang="en")
           .chatbox-row
             .chatbox
               img(class="chat__avatar" src="assets/img/dp.jpg", alt="Cayla Brister")
-              p.chatbox__text Hi Cayla!  If you have any questions before    we start, feel free to ask. 
+              .textdiv
+                p.chatbox__text Hi Cayla!  If you have any questions before    we start, feel free to ask. 
+                p.chatbox-time 7 min ago
           .chatbox-row
             .chatbox.chatbox-right
               img(class="chat__avatar" src="assets/img/newdp.png", alt="Cayla Brister")
-              p.chatbox__text-2 Hello Prescott! Should I check our last lesson?
+              .textdiv-right
+                p.chatbox__text-2 Hello Prescott! Should I check our last lesson?
+                p.chatbox-time-right 5 min ago
+            
 
         .message
             .message-1

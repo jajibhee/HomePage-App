@@ -6,7 +6,7 @@ body {
   border: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #f0f0f0;
+  background-color: transparent;
 }
 
 .container {
@@ -14,7 +14,6 @@ body {
   margin: 2rem 4rem;
   -webkit-box-shadow: 4px 0px 16px #cccccc88;
           box-shadow: 4px 0px 16px #cccccc88;
-  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,7 +25,9 @@ body {
 .container .sidebar {
   max-width: 30%;
   padding: 1rem;
-  color: #ffffff;
+  color: #f5f5f5;
+  font-weight: bolder;
+  font-size: 1.3rem;
   width: 250px;
   height: inherit;
   background-color: #4e58ff;
@@ -68,12 +69,14 @@ body {
 }
 
 .container .menu__item-name {
+  opacity: 0.8;
   margin: 0;
 }
 
 .container .menu__item-icon {
   margin-right: 1rem;
   height: 1.25rem;
+  opacity: 0.8;
 }
 
 .container .menu__group {
@@ -81,6 +84,8 @@ body {
 }
 
 .container .menu__group-header {
+  font-weight: bolder;
+  opacity: 0.8;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
   padding-left: 0.5rem;
@@ -122,7 +127,11 @@ body {
   height: 1rem;
 }
 
-.profile__notification:hover {
+.profile__notification-icon {
+  height: 18px;
+}
+
+.profile__notification-icon:hover {
   cursor: pointer;
 }
 
@@ -142,9 +151,17 @@ body {
   border-radius: 50%;
 }
 
-.aside {
-  max-width: 30%;
+.lesson-box {
   padding: 1rem;
+  border: 1px solid white;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.aside {
+  background-color: #f7f7fe;
+  max-width: 30%;
+  padding: 1.5rem;
 }
 
 .aside .lesson-one {
@@ -163,7 +180,7 @@ body {
 }
 
 .aside .lesson-one__h1 {
-  font-weight: bolder;
+  font-weight: 10;
   margin-right: 0.5rem;
 }
 
@@ -314,6 +331,8 @@ body {
 
 .materials {
   margin-top: 3.5rem;
+  font-weight: bolder;
+  font-size: 1.5rem;
 }
 
 .materials__list {
@@ -323,20 +342,27 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #e3defb;
+  background-color: #ffffff;
   border-radius: 5px;
   padding: 0px 5px;
   margin-bottom: 1rem;
 }
 
 .materials__list-img {
-  height: 43px;
-  color: #f85068;
-  padding-right: 2.5rem;
+  height: 1.3rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .materials__list-text h2 {
   margin-bottom: -10px;
+  font-size: 18px;
+  color: #2e2d2d;
+}
+
+.materials__list-text p {
+  font-size: 14px;
+  color: #dedfe0;
 }
 
 .materials__list-images {
@@ -350,10 +376,9 @@ body {
 }
 
 .main {
-  margin-left: 1.5rem;
   max-width: 60%;
   height: inherit;
-  background-color: #cfc7f9;
+  background-color: white;
   padding: 1rem;
 }
 
@@ -394,7 +419,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 0.5px solid #ffffff55;
+  border-bottom: 0.5px solid #dedede;
   padding-bottom: 1rem;
 }
 
@@ -437,7 +462,7 @@ body {
 
 .main2__box-buttons-button-1, .main2__box-buttons-button-2 {
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #f5f5f5;
   height: 20px;
   width: 20px;
   margin: 15px 5px;
@@ -458,7 +483,7 @@ body {
   bottom: 3%;
   right: 1%;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #f5f5f5;
   height: 20px;
   width: 20px;
   margin: 15px 5px;
@@ -486,14 +511,14 @@ body {
 
 .linebreak .line {
   height: 1px;
-  background-color: #d9d9d9;
+  background-color: #cfcfcf;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
 
 .linebreak .line2 {
   height: 1px;
-  background-color: #d9d9d9;
+  background-color: #cfcfcf;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
@@ -503,8 +528,9 @@ body {
   max-width: 100%;
   margin-top: 0.5rem;
   padding-left: 1rem;
-  border-bottom: 0.5px solid black;
-  padding-bottom: 15rem;
+  border-bottom: 0.5px solid #dedede;
+  padding-bottom: 5rem;
+  position: relative;
 }
 
 .chat__avatar {
@@ -526,24 +552,41 @@ body {
           align-items: center;
 }
 
+.textdiv-right {
+  width: 30%;
+  text-align: left;
+}
+
+.textdiv {
+  width: 30%;
+  text-align: right;
+}
+
+.chatbox-time,
+.chatbox-time-right {
+  color: #dedede;
+}
+
 .chatbox__text {
   padding: 20px;
-  width: 25%;
   text-align: center;
-  background-color: gray;
-  color: #5b41e9;
+  background-color: #e9eafa;
+  color: #6566a0;
+  font-weight: bolder;
   border-radius: 0px 10px 10px 10px;
+  text-align: left;
   border: 1px solid inherit;
-  margin: 0.5rem;
+  margin-left: 0.5rem;
 }
 
 .chatbox__text-2 {
   padding: 20px;
-  width: 25%;
   text-align: center;
-  background-color: gray;
-  color: #5b41e9;
+  background-color: #f1f2fe;
+  color: #6566a0;
+  font-weight: bolder;
   border-radius: 10px 10px 10px 0px;
+  text-align: left;
   border: 1px solid inherit;
   margin-right: 0.5rem;
 }
@@ -564,8 +607,14 @@ body {
           justify-content: flex-end;
 }
 
+.chatbox-right .chat__avatar {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
 .message {
-  margin-top: 1rem;
+  margin: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -577,8 +626,7 @@ body {
           justify-content: space-between;
 }
 
-.message-1 {
-  padding-left: 1rem;
+.message .message-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -587,17 +635,11 @@ body {
           align-items: center;
 }
 
-.message-1 img {
-  margin: 0px 0.5rem;
+.message .message-1 img {
   padding-right: 1rem;
 }
 
-.message-1 p {
-  margin-left: 2.5rem;
-  border: none;
-}
-
-.chat-form {
+.message .message-1 .chat-form {
   padding: 8px;
   width: 900px;
   font-size: 1em;
@@ -605,7 +647,7 @@ body {
   background-color: transparent;
 }
 
-.chat-form:active, .chat-form:focus {
+.message .message-1 .chat-form:active, .message .message-1 .chat-form:focus {
   outline: 0;
 }
 /*# sourceMappingURL=app.css.map */
