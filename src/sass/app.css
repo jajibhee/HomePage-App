@@ -319,14 +319,34 @@ body {
 }
 
 .agenda__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: relative;
+  padding-left: 2rem;
 }
 
-.agenda__list__tick {
-  margin-right: 2.5rem;
-  border-left: 4px solid #4e58ff;
+.agenda__list::before {
+  content: "";
+  position: absolute;
+  background-color: #5058f6;
+  display: inline-block;
+  left: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 2px;
+  height: 90%;
+}
+
+.agenda__list-text {
+  margin-bottom: 2.5rem;
+}
+
+.agenda__list-text::before {
+  content: "";
+  background-color: #5058f6;
+  height: 1rem;
+  display: inline-block;
+  margin-right: 20px;
+  width: 1rem;
+  border-radius: 50%;
 }
 
 .materials {
