@@ -66,10 +66,10 @@ html(lang="en")
             img(class="profile2__avatar" src="assets/img/newdp.png", alt="Cayla Brister")
             p.profile2__name Prescott MacCaffery
 
-          .btn
-            p(class="btn__01 ") Speaking
-            p(class="btn__02 ") Verb
-            p(class="btn__03 ") Grammar
+          .btn-group
+            button(class="btn") Speaking
+            button(class="btn") Verb
+            button(class="btn") Grammar
 
         .agenda
           h1 Lesson agenda
@@ -86,14 +86,15 @@ html(lang="en")
         //- +materialsList("image.svg", "London Places", "Vocabulary Training")
         
         .materials__list
-          img(class="materials__list-img" src="assets/img/image.svg", alt="play")
-          .materials__list-text
-            h2 London Places
-            p Vocabulary Training
-          //- .materials__list-images
-          //-   img(src="assets/img/statue.jpeg", alt="")
-          //-   img(src="assets/img/building.jpeg", alt="")
-          //-   img(src="assets/img/store.jpeg", alt="")
+          img(class="materials__list-img" src="assets/img/imagess.svg", alt="play")
+          div.specialbox
+            .materials__list-text
+              h2 London Places
+              p Vocabulary Training
+            .materials__list-images
+              img(src="assets/img/statue.jpeg", alt="")
+              img(src="assets/img/building.jpeg", alt="")
+              img(src="assets/img/store.jpeg", alt="")
 
 
         +materialsList("music.svg", "Slow Speaking", "Hearing Exercise")
@@ -133,7 +134,7 @@ html(lang="en")
             .chatbox.chatbox-right
               img(class="chat__avatar" src="assets/img/newdp.png", alt="Cayla Brister")
               .textdiv-right
-                p.chatbox__text-2 Hello Prescott! Should I check our last lesson?
+                p.chatbox__text Hello Prescott! Should I check our last lesson?
                 p.chatbox-time-right 5 min ago
             
 

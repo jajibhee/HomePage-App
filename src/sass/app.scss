@@ -18,25 +18,29 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
+
   box-sizing: border-box;
   background-color: transparent;
 }
 
 .container {
-  width: 100%;
+  max-width: 100%;
+  // width: 100%;
   margin: 2rem 4rem;
   box-shadow: 4px 0px 16px #cccccc88;
   // background-color: #ffffff;
   display: flex;
   align-items: flex start;
 
+  // box-shadow: 28px 1px 123px 7px rgba(5, 5, 5, 1);
+
   .sidebar {
-    max-width: 30%;
+    max-width: 20%;
     padding: 1rem;
     color: colors(color-font);
     font-weight: bolder;
-    font-size: 1.3rem;
-    width: 250px;
+    font-size: 0.9rem;
+    // width: 250px;
     height: inherit;
     background-color: colors(main);
 
@@ -56,7 +60,7 @@ body {
       display: flex;
       align-items: center;
       padding: 0.5rem 1rem;
-      margin: 0.75rem 0;
+      // margin: 0.75rem 0;
       border-radius: 4px;
 
       &:hover {
@@ -146,7 +150,7 @@ body {
 }
 .lesson-box {
   padding: 1rem;
-  border: 1px solid white;
+  // border: 1px solid white;
   background-color: #ffffff;
   border-radius: 10px;
 }
@@ -175,20 +179,23 @@ body {
 .b2 {
   padding-left: 1rem;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
 
   &__eng {
     color: colors(btn);
     font-weight: bolder;
+    font-size: 1rem;
   }
 
   &__line {
+    font-size: 1rem;
     color: colors(btn);
     font-weight: bolder;
     padding: 0 1rem;
   }
 
   &__verb {
+    font-size: 1rem;
     font-weight: bolder;
   }
 }
@@ -202,13 +209,14 @@ body {
   .time {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
 
     &__clock {
-      height: 1rem;
+      height: 0.8rem;
     }
 
     &__text {
+      font-size: 0.8rem;
       font-weight: lighter;
       padding-left: 0.5rem;
     }
@@ -218,13 +226,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 1.5rem;
+    padding-left: 0.9rem;
 
     &__calendar {
-      height: 1rem;
+      height: 0.8rem;
     }
 
     &__july {
+      font-size: 0.8rem;
       font-weight: lighter;
       padding-left: 0.5rem;
     }
@@ -236,39 +245,38 @@ body {
   display: flex;
   padding-left: 1rem;
   align-items: center;
-  border-bottom: 0.5px solid black;
+  border-bottom: 0.5px solid #dedede;
   padding-bottom: 1rem;
 
   &__avatar {
-    margin-right: 20px;
+    margin-right: 0.5rem;
     border-radius: 50%;
-    height: 3rem;
-    width: 3rem;
+    height: 1.5rem;
+    width: 1.5rem;
   }
 
   &__name {
     font-weight: bolder;
     margin-right: 0.5rem;
+    font-size: 0.8rem;
   }
 }
 
-.btn {
+.btn-group {
   margin-top: 1.5rem;
   width: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  &__01,
-  &__02,
-  &__03 {
-    height: 1rem;
+  .btn {
+    line-height: 1rem;
     background-color: lighten(colors(btn-text), 5%);
     width: 5rem;
     border-radius: 5px;
     padding: 10px 10px;
     color: colors(btn);
-    font-weight: bolder;
+    font-weight: bold;
     border: none;
     margin-right: 15px;
   }
@@ -279,16 +287,17 @@ body {
   &__list {
     position: relative;
     padding-left: 2rem;
+    font-size: 0.8rem;
 
     &::before {
       content: "";
       position: absolute;
       background-color: #5058f6;
       display: inline-block;
-      left: 40px;
+      left: 41px;
       margin-top: 10px;
       margin-bottom: 10px;
-      width: 2px;
+      width: 1px;
       height: 90%;
     }
     &-text {
@@ -329,11 +338,11 @@ body {
 
     &-text h2 {
       margin-bottom: -10px;
-      font-size: 18px;
+      font-size: 1rem;
       color: rgb(46, 45, 45);
     }
     &-text p {
-      font-size: 14px;
+      font-size: 0.8rem;
       color: #dedfe0;
     }
     &-images {
@@ -348,7 +357,7 @@ body {
 
 .main {
   // margin-left: 1.5rem;
-  max-width: 60%;
+  max-width: 50%;
   height: inherit;
   background-color: white;
   padding: 1rem;
@@ -393,7 +402,7 @@ body {
     &-image1 {
       max-width: 100%;
       border-radius: 5px;
-      box-shadow: gray;
+      // box-shadow: 2px 2px 29px -4px rgba(0, 0, 0, 0.75);
     }
 
     &-image2 {
@@ -402,7 +411,7 @@ body {
       top: 2.5%;
       right: 1.5%;
       border-radius: 5px;
-      box-shadow: 4px 0px 16px #cccccc88;
+      box-shadow: 2px 2px 34px -10px rgba(5, 5, 5, 1);
     }
     &-buttons {
       display: flex;
@@ -412,7 +421,9 @@ body {
       left: 45%;
       // transform: translateX(-50%);
       // (I didnt use this cause I divided 90 by 2)
-
+      &-buttons img {
+        fill: #5058f6;
+      }
       &-button-1,
       &-button-2 {
         border-radius: 50%;
@@ -421,7 +432,9 @@ body {
         width: 20px;
         margin: 15px 5px;
         padding: 7.5px;
+        fill: #4e58ff;
       }
+
       &-button-3 {
         border-radius: 50%;
         background-color: colors(accent);
@@ -517,6 +530,7 @@ body {
   font-weight: bolder;
   border-radius: 0px 10px 10px 10px;
   text-align: left;
+  font-size: 0.8rem;
   border: 1px solid inherit;
   margin-left: 0.5rem;
 }

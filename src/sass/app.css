@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  width: 100%;
+  max-width: 100%;
   margin: 2rem 4rem;
   -webkit-box-shadow: 4px 0px 16px #cccccc88;
           box-shadow: 4px 0px 16px #cccccc88;
@@ -23,12 +23,11 @@ body {
 }
 
 .container .sidebar {
-  max-width: 30%;
+  max-width: 20%;
   padding: 1rem;
   color: #f5f5f5;
   font-weight: bolder;
-  font-size: 1.3rem;
-  width: 250px;
+  font-size: 0.9rem;
   height: inherit;
   background-color: #4e58ff;
 }
@@ -59,7 +58,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.5rem 1rem;
-  margin: 0.75rem 0;
   border-radius: 4px;
 }
 
@@ -153,7 +151,6 @@ body {
 
 .lesson-box {
   padding: 1rem;
-  border: 1px solid white;
   background-color: #ffffff;
   border-radius: 10px;
 }
@@ -189,23 +186,23 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .b2__eng {
   color: #5b41e9;
   font-weight: bolder;
+  font-size: 1rem;
 }
 
 .b2__line {
+  font-size: 1rem;
   color: #5b41e9;
   font-weight: bolder;
   padding: 0 1rem;
 }
 
 .b2__verb {
+  font-size: 1rem;
   font-weight: bolder;
 }
 
@@ -227,16 +224,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .timestamp .time__clock {
-  height: 1rem;
+  height: 0.8rem;
 }
 
 .timestamp .time__text {
+  font-size: 0.8rem;
   font-weight: lighter;
   padding-left: 0.5rem;
 }
@@ -251,14 +246,15 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-left: 1.5rem;
+  padding-left: 0.9rem;
 }
 
 .timestamp .calendar__calendar {
-  height: 1rem;
+  height: 0.8rem;
 }
 
 .timestamp .calendar__july {
+  font-size: 0.8rem;
   font-weight: lighter;
   padding-left: 0.5rem;
 }
@@ -272,23 +268,24 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 0.5px solid black;
+  border-bottom: 0.5px solid #dedede;
   padding-bottom: 1rem;
 }
 
 .profile2__avatar {
-  margin-right: 20px;
+  margin-right: 0.5rem;
   border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .profile2__name {
   font-weight: bolder;
   margin-right: 0.5rem;
+  font-size: 0.8rem;
 }
 
-.btn {
+.btn-group {
   margin-top: 1.5rem;
   width: 1rem;
   display: -webkit-box;
@@ -302,14 +299,14 @@ body {
           justify-content: space-between;
 }
 
-.btn__01, .btn__02, .btn__03 {
-  height: 1rem;
+.btn-group .btn {
+  line-height: 1rem;
   background-color: #e3defb;
   width: 5rem;
   border-radius: 5px;
   padding: 10px 10px;
   color: #5b41e9;
-  font-weight: bolder;
+  font-weight: bold;
   border: none;
   margin-right: 15px;
 }
@@ -321,6 +318,7 @@ body {
 .agenda__list {
   position: relative;
   padding-left: 2rem;
+  font-size: 0.8rem;
 }
 
 .agenda__list::before {
@@ -328,10 +326,10 @@ body {
   position: absolute;
   background-color: #5058f6;
   display: inline-block;
-  left: 40px;
+  left: 41px;
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 2px;
+  width: 1px;
   height: 90%;
 }
 
@@ -376,12 +374,12 @@ body {
 
 .materials__list-text h2 {
   margin-bottom: -10px;
-  font-size: 18px;
+  font-size: 1rem;
   color: #2e2d2d;
 }
 
 .materials__list-text p {
-  font-size: 14px;
+  font-size: 0.8rem;
   color: #dedfe0;
 }
 
@@ -396,7 +394,7 @@ body {
 }
 
 .main {
-  max-width: 60%;
+  max-width: 50%;
   height: inherit;
   background-color: white;
   padding: 1rem;
@@ -454,8 +452,6 @@ body {
 .main2__box-image1 {
   max-width: 100%;
   border-radius: 5px;
-  -webkit-box-shadow: gray;
-          box-shadow: gray;
 }
 
 .main2__box-image2 {
@@ -464,8 +460,8 @@ body {
   top: 2.5%;
   right: 1.5%;
   border-radius: 5px;
-  -webkit-box-shadow: 4px 0px 16px #cccccc88;
-          box-shadow: 4px 0px 16px #cccccc88;
+  -webkit-box-shadow: 2px 2px 34px -10px #050505;
+          box-shadow: 2px 2px 34px -10px #050505;
 }
 
 .main2__box-buttons {
@@ -480,6 +476,10 @@ body {
   left: 45%;
 }
 
+.main2__box-buttons-buttons img {
+  fill: #5058f6;
+}
+
 .main2__box-buttons-button-1, .main2__box-buttons-button-2 {
   border-radius: 50%;
   background-color: #f5f5f5;
@@ -487,6 +487,7 @@ body {
   width: 20px;
   margin: 15px 5px;
   padding: 7.5px;
+  fill: #4e58ff;
 }
 
 .main2__box-buttons-button-3 {
@@ -595,6 +596,7 @@ body {
   font-weight: bolder;
   border-radius: 0px 10px 10px 10px;
   text-align: left;
+  font-size: 0.8rem;
   border: 1px solid inherit;
   margin-left: 0.5rem;
 }
