@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./src/js/app.js?");
+eval("//Grab the element containing the nav icon first\nconst menuBtn = document.querySelector(\" .mobile_icon\");\nconst menuItem = document.querySelector(\".menu__item\");\n\nlet showNav = false;\n\nmenuBtn.addEventListener(\"click\", toggleMenu);\n\nfunction toggleMenu() {\n  if (!showNav) {\n    menuBtn.classList.add(\"show\");\n    menuItem.classList.add(\"show\");\n\n    showNav = true;\n  } else {\n    menuBtn.classList.remove(\"show\");\n    menuItem.classList.remove(\"show\");\n\n    showNav = false;\n  }\n}\n\n//# sourceURL=webpack:///./src/js/app.js?");
 
 /***/ })
 

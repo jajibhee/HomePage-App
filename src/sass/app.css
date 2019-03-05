@@ -23,7 +23,6 @@ body {
 }
 
 .container .sidebar {
-  max-width: 20%;
   padding: 1rem;
   color: #f5f5f5;
   font-weight: bolder;
@@ -131,6 +130,10 @@ body {
 
 .profile__notification-icon:hover {
   cursor: pointer;
+}
+
+.menu-mobile_icon {
+  display: none;
 }
 
 /* Notification Dot */
@@ -286,8 +289,7 @@ body {
 }
 
 .btn-group {
-  margin-top: 1.5rem;
-  width: 1rem;
+  margin: 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -550,7 +552,6 @@ body {
   margin-top: 0.5rem;
   padding-left: 1rem;
   border-bottom: 0.5px solid #dedede;
-  padding-bottom: 5rem;
   position: relative;
 }
 
@@ -586,6 +587,7 @@ body {
 .chatbox-time,
 .chatbox-time-right {
   color: #dedede;
+  margin-top: 0rem;
 }
 
 .chatbox__text {
@@ -598,7 +600,6 @@ body {
   text-align: left;
   font-size: 0.8rem;
   border: 1px solid inherit;
-  margin-left: 0.5rem;
 }
 
 .chatbox__text-2 {
@@ -671,5 +672,91 @@ body {
 
 .message .message-1 .chat-form:active, .message .message-1 .chat-form:focus {
   outline: 0;
+}
+
+@media (min-width: 326px) and (max-width: 720px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 1rem;
+  }
+  .sidebar {
+    max-width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  .menu__item {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .aside {
+    max-width: 100%;
+  }
+  .lesson-one,
+  .lesson-box,
+  .b2,
+  .profile2,
+  .timestamp {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .btn-group {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 1rem;
+  }
+  .agenda {
+    text-align: center;
+  }
+  .materials {
+    text-align: center;
+  }
+  .main {
+    max-width: 100%;
+  }
+  .main2__box-image2 {
+    height: 3rem;
+  }
+  .main2__box-buttons-button-1,
+  .main2__box-buttons-button-2,
+  .main2__box-buttons-button-3,
+  .main2__box-4 {
+    height: 0.65rem;
+    width: 0.65rem;
+  }
+  .main2__box-buttons {
+    left: 30%;
+  }
+  .chatbox {
+    max-width: 100%;
+  }
+  .textdiv,
+  .textdiv-right {
+    width: 50%;
+    font-size: 0.65rem;
+  }
+  .textdiv {
+    margin-bottom: 2rem;
+  }
+  .profile__notification.unread {
+    visibility: hidden;
+  }
+  .menu-mobile_icon {
+    display: inline-block;
+  }
+  .menu-mobile_icon img {
+    height: 2rem;
+    fill: #4e58ff;
+    margin-left: 3rem;
+  }
+  .sidebar__nav {
+    display: none;
+  }
 }
 /*# sourceMappingURL=app.css.map */
