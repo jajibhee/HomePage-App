@@ -1,0 +1,222 @@
+.aside {
+  background-color: #f7f7fe;
+  width: 100%;
+  box-sizing: border-box;
+  // margin-left: 1rem;
+  padding: 1rem;
+  margin-top: 3rem;
+
+  @media screen and (min-width: 48rem) {
+    width: 30%;
+    padding: 1.5rem;
+    margin: 0;
+  }
+  .lesson-one {
+    display: flex;
+    align-items: center;
+
+    &__arrow {
+      margin-right: 20px;
+      border-radius: 50%;
+      height: 1.5rem;
+    }
+
+    &__h1 {
+      font-weight: 10;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.lesson-box {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 0.6rem;
+}
+
+.b2 {
+  padding-left: 1rem;
+  display: flex;
+  // justify-content: space-between;
+
+  &__eng {
+    color: colors(btn);
+    font-weight: bolder;
+    font-size: 1rem;
+  }
+
+  &__line {
+    font-size: 1rem;
+    color: colors(btn);
+    font-weight: bolder;
+    padding: 0 1rem;
+  }
+
+  &__verb {
+    font-size: 1rem;
+    font-weight: bolder;
+  }
+}
+
+.timestamp {
+  margin-top: -1.5rem;
+  display: flex;
+  padding-left: 1rem;
+  align-items: center;
+
+  .time {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+
+    &__clock {
+      height: 0.8rem;
+    }
+
+    &__text {
+      font-size: 0.8rem;
+      font-weight: lighter;
+      padding-left: 0.5rem;
+    }
+  }
+
+  .calendar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.9rem;
+
+    &__calendar {
+      height: 0.8rem;
+    }
+
+    &__july {
+      font-size: 0.8rem;
+      font-weight: lighter;
+      padding-left: 0.5rem;
+    }
+  }
+}
+
+.profile2 {
+  margin-top: 0.5rem;
+  display: flex;
+  padding-left: 1rem;
+  align-items: center;
+  border-bottom: 0.5px solid #dedede;
+  padding-bottom: 1rem;
+
+  &__avatar {
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  &__name {
+    font-weight: bolder;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+.btn-group {
+  margin: 1rem 0;
+  // width: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .btn {
+    line-height: 1rem;
+    background-color: lighten(colors(btn-text), 5%);
+    width: 5rem;
+    border-radius: 5px;
+    padding: 10px 10px;
+    color: colors(btn);
+    font-weight: bold;
+    border: none;
+    margin-right: 15px;
+  }
+}
+.agenda img {
+  display: none;
+  background-color: #5058f6;
+}
+
+.agenda {
+  margin-top: 0.8rem;
+
+  @media screen and (min-width: 48em) {
+    margin-top: 3.5rem;
+  }
+}
+.agenda {
+  &__list {
+    position: relative;
+    padding-left: 2rem;
+    font-size: 0.8rem;
+    overflow-y: hidden;
+    transition: all 0.5s ease-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #5058f6;
+      display: inline-block;
+      left: 41px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 1px;
+      height: 90%;
+    }
+    &-text {
+      margin-bottom: 2.5rem;
+    }
+
+    &-text::before {
+      content: "";
+      background-color: #5058f6;
+      height: 1rem;
+      display: inline-block;
+      margin-right: 20px;
+      width: 1rem;
+      border-radius: 50%;
+    }
+  }
+}
+
+.materials {
+  &__list {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 0px 5px;
+    margin-bottom: 1rem;
+
+    &-img {
+      height: 1.3rem;
+      // color: #f85068;
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+
+    &-text h2 {
+      margin-bottom: -10px;
+      font-size: 1rem;
+      color: rgb(46, 45, 45);
+    }
+    &-text p {
+      font-size: 0.8rem;
+      color: #dedfe0;
+    }
+    &-images {
+      display: flex;
+    }
+
+    &-images img {
+      height: 80px;
+    }
+  }
+}

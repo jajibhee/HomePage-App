@@ -1,15 +1,4 @@
-mixin menuItem(img, title)
-  div.menu__item
-    img(class="menu__item-icon" src=`assets/img/${img}` alt=`${title}`)
-    p.menu__item-name= title
-
-mixin materialsList(img, title, caption)
-  div.materials__list
-    img(class="materials__list-img" src=`assets/img/${img}` alt=`${title}`)
-    div.materials__list-text
-      h2= title
-      p= caption
-
+include ./_mixins.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -38,11 +27,11 @@ html(lang="en")
           +menuItem("home.svg", "Home")
           div.menu__group
             p.menu__group-header Courses
-            div.menu__group-items
+            ul.menu__group-items
               +menuItem("lessons.svg", "Lessons")
               +menuItem("homework.svg", "Homework")
             p.menu__group-header Self Education
-            .menu__group-items
+            ul.menu__group-items
               +menuItem('vocabulary.svg', 'Vocabulary')    
               +menuItem('video-lessons.svg', 'Video Lessons')    
               +menuItem('tests.svg', 'Tests')    
@@ -77,6 +66,7 @@ html(lang="en")
 
         .agenda
           h1 Lesson agenda
+          img(src="assets/img/chevron-down.svg", alt="")
 
         .agenda__list
           .agenda__list-text Introduction
@@ -85,16 +75,15 @@ html(lang="en")
           .agenda__list-text Going to
           .agenda__list-text Home work
 
-        h1.materials Lesson Materials
+        h1 Lesson Materials
         +materialsList("play.svg", "London Situation", "Vedeo Lesson")
         //- +materialsList("image.svg", "London Places", "Vocabulary Training")
         
         .materials__list
           img(class="materials__list-img" src="assets/img/imagess.svg", alt="play")
-          div.specialbox
-            .materials__list-text
-              h2 London Places
-              p Vocabulary Training
+          .materials__list-text
+            h2 London Places
+            p Vocabulary Training
             .materials__list-images
               img(src="assets/img/statue.jpeg", alt="")
               img(src="assets/img/building.jpeg", alt="")

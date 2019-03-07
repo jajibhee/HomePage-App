@@ -1,0 +1,11 @@
+mixin menuItem(img, title)
+  li.menu__item
+    img(class="menu__item-icon" src=`assets/img/${img}` alt=`${title}`)
+    p.menu__item-name= title
+
+mixin materialsList(img, title, caption)
+  div.materials__list
+    img(class="materials__list-img" src=`assets/img/${img}` alt=`${title}`)
+    div.materials__list-text
+      h2= title
+      p= caption
